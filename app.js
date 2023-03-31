@@ -45,21 +45,18 @@ const gameBtn = () => {
       ) {
         resultText.innerHTML = "YOU WIN";
         count++;
-        confettiFunc();
       } else if (
         styles[1].slice(0, styles[1].length - 4) === "rock" &&
         numPick === 2
       ) {
         resultText.innerHTML = "YOU WIN";
         count++;
-        confettiFunc();
       } else if (
         styles[1].slice(0, styles[1].length - 4) === "scissors" &&
         numPick === 0
       ) {
         resultText.innerHTML = "YOU WIN";
         count++;
-        confettiFunc();
       } else if (
         styles[1].slice(0, styles[1].length - 4) === "paper" &&
         numPick === 0
@@ -128,12 +125,6 @@ const rulesBtn = () => {
   closeBtn.addEventListener("click", () => {
     overlay.style.display = "none";
   });
-};
-
-const confettiFunc = () => {
-  const confettiBox = document.querySelector(".confetti-box");
-  confettiBox.innerHTML = "🎉";
-  confettiBox.style.bottom = "30px";
 };
 
 gameBtn();

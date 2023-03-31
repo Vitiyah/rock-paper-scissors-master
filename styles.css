@@ -301,16 +301,6 @@ body {
   cursor: pointer;
 }
 
-/* Confetti Styling */
-
-.confetti-box {
-  position: absolute;
-  font-size: 100px;
-  bottom: -200px;
-  margin: 0 auto;
-  transition: 0.3s all ease-out;
-}
-
 /* Media Screen Styling */
 
 @media screen and (min-width: 500px) and (max-width: 600px) {
