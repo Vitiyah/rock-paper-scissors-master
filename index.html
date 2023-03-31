@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Rock || Paper || Scissors</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="scoreboard">
+          <div class="score-text">
+            <p>ROCK</p>
+            <p>PAPER</p>
+            <p>SCISSORS</p>
+          </div>
+          <div class="score-box">
+            <p>SCORE</p>
+            <p class="score-count">0</p>
+          </div>
+        </div>
+        <div class="game-btns">
+          <img class="game-relative" src="./images/bg-triangle.svg" alt="" />
+          <div class="btn rock-btn">
+            <img src="./images/icon-rock.svg" alt="" />
+          </div>
+          <div class="btn paper-btn">
+            <img src="./images/icon-paper.svg" alt="" />
+          </div>
+          <div class="btn scissors-btn">
+            <img src="./images/icon-scissors.svg" alt="" />
+          </div>
+        </div>
+        <div class="game-results">
+          <div class="game-box">
+            <div class="text-box-1">
+              <div class="btna result-btn">
+                <img src="" alt="" class="result-img" />
+              </div>
+              <p class="text">YOU PICKED</p>
+            </div>
+            <div class="text-box-2">
+              <div class="btna comp-results">
+                <img src="" alt="" class="comp-img" />
+              </div>
+              <p class="text">THE HOUSE PICKED</p>
+            </div>
+          </div>
+          <div class="result-box">YOU WIN</div>
+          <div class="reset-container">
+            <button class="reset-btn">PLAY AGAIN</button>
+          </div>
+        </div>
+        <div class="rules-overlay">
+          <div class="rules-box">
+            <div class="rules-header">
+              <p>RULES</p>
+              <img src="./images/icon-close.svg" alt="" class="close-btn" />
+            </div>
+            <img src="./images/image-rules.svg" alt="" class="rules-img" />
+          </div>
+        </div>
+        <button class="rules-btn">RULES</button>
+      </div>
+    </div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

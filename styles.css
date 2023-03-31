@@ -1,0 +1,368 @@
+/* Root Variables */
+
+:root {
+  --font-family: "Barlow Semi Condensed", sans-serif;
+  --color-lightblue: hsl(214, 47%, 23%);
+  --color-darkblue: hsl(237, 49%, 15%);
+  --color-outline: hsl(217, 16%, 45%);
+  --score-text: hsl(229, 64%, 46%);
+  --dark-text: hsl(229, 25%, 31%);
+}
+
+/* Universal CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styling */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(
+    circle at top,
+    var(--color-lightblue),
+    var(--color-darkblue)
+  );
+  font-family: var(--font-family);
+}
+
+/* Hero Section Styling */
+
+.hero {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-inner {
+  width: 90%;
+  height: 90%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Scoreboard Styling */
+
+.scoreboard {
+  width: 45rem;
+  height: 7rem;
+  border: 3px solid var(--color-outline);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem;
+}
+
+.score-text {
+  margin: 2rem 0 2rem 0.7rem;
+}
+
+.score-text p {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.score-box {
+  width: 7rem;
+  height: 5.5rem;
+  background: white;
+  border-radius: 5px;
+  margin-right: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-box p {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  color: var(--score-text);
+}
+
+.score-box .score-count {
+  font-size: 3rem;
+  color: var(--dark-text);
+}
+
+/* Game Button Styling */
+
+.game-btns {
+  width: 310px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rem;
+  position: relative;
+}
+
+.btn {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.rock-btn {
+  border: 15px solid hsl(349, 70%, 56%);
+  box-shadow: 0px 7px 0px hsl(349, 65%, 44%),
+    inset 0px 7px 0px rgba(0, 0, 0, 0.1);
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.paper-btn {
+  border: 15px solid hsl(230, 89%, 65%);
+  box-shadow: 0px 7px 0px hsl(230, 55%, 46%),
+    inset 0px 7px 0px rgba(0, 0, 0, 0.1);
+  top: -15%;
+  left: -15%;
+  transform: translate(15%, 15%);
+}
+
+.scissors-btn {
+  border: 15px solid hsl(40, 84%, 53%);
+  box-shadow: 0px 7px 0px hsl(39, 78%, 43%),
+    inset 0px 7px 0px rgba(0, 0, 0, 0.1);
+  top: -15%;
+  right: -5%;
+  transform: translate(5%, 15%);
+}
+
+/* Rules Styling */
+
+.rules-btn {
+  width: 6rem;
+  height: 2rem;
+  background: none;
+  border-radius: 8px;
+  outline: none;
+  border: 1.5px solid rgb(179, 178, 178);
+  color: rgb(179, 178, 178);
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  transform: translate(-5%, -5%);
+  cursor: pointer;
+}
+
+.rules-box {
+  width: 300px;
+  height: 300px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules-header {
+  width: 85%;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rules-header p {
+  font-size: 1.2rem;
+  color: var(--color-lightblue);
+  font-weight: 700;
+}
+
+.rules-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.rules-img {
+  width: 75%;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+/* Game Results Styling */
+
+.game-results {
+  width: 350px;
+  height: 400px;
+  display: none;
+}
+
+.btna {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.paper {
+  border: 15px solid hsl(230, 89%, 65%);
+  box-shadow: 0px 7px 0px hsl(230, 55%, 46%),
+    inset 0px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+.rock {
+  border: 15px solid hsl(349, 70%, 56%);
+  box-shadow: 0px 7px 0px hsl(349, 65%, 44%),
+    inset 0px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+.scissors {
+  border: 15px solid hsl(40, 84%, 53%);
+  box-shadow: 0px 7px 0px hsl(39, 78%, 43%),
+    inset 0px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+.comp-results {
+  display: none;
+}
+
+.game-box {
+  width: 100%;
+  height: 40%;
+  display: flex;
+}
+
+.text-box-1,
+.text-box-2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.text {
+  margin-top: 13rem;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+.result-box {
+  text-align: center;
+  font-size: 3.5rem;
+  color: white;
+  font-weight: 700;
+  margin-top: 5rem;
+}
+
+.reset-container {
+  text-align: center;
+}
+
+.reset-btn {
+  width: 12rem;
+  height: 3rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  border: none;
+  outline: none;
+  color: var(--color-darkblue);
+  font-size: 1rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Media Screen Styling */
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .game-results {
+    width: 500px;
+    height: 700px;
+  }
+  .scoreboard {
+    width: 28rem;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 850px) {
+  .game-results {
+    width: 600px;
+    height: 700px;
+  }
+  .scoreboard {
+    width: 34rem;
+  }
+}
+
+@media screen and (min-width: 851px) and (max-width: 1200px) {
+  .game-results {
+    width: 860px;
+    height: 700px;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .game-results {
+    width: 1100px;
+    height: 700px;
+  }
+  .btna {
+    width: 200px;
+    height: 200px;
+  }
+  .btna img {
+    width: 50%;
+  }
+  .game-box {
+    height: 60%;
+  }
+  .text {
+    margin-top: 20rem;
+    font-size: 2rem;
+  }
+  .paper {
+    border: 25px solid hsl(230, 89%, 65%);
+    box-shadow: 0px 10px 0px hsl(230, 55%, 46%),
+      inset 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .rock {
+    border: 25px solid hsl(349, 70%, 56%);
+    box-shadow: 0px 10px 0px hsl(349, 65%, 44%),
+      inset 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .scissors {
+    border: 25px solid hsl(40, 84%, 53%);
+    box-shadow: 0px 10px 0px hsl(39, 78%, 43%),
+      inset 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+}
