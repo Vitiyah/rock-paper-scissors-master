@@ -45,18 +45,21 @@ const gameBtn = () => {
       ) {
         resultText.innerHTML = "YOU WIN";
         count++;
+        confettiFunc();
       } else if (
         styles[1].slice(0, styles[1].length - 4) === "rock" &&
         numPick === 2
       ) {
         resultText.innerHTML = "YOU WIN";
         count++;
+        confettiFunc();
       } else if (
         styles[1].slice(0, styles[1].length - 4) === "scissors" &&
         numPick === 0
       ) {
         resultText.innerHTML = "YOU WIN";
         count++;
+        confettiFunc();
       } else if (
         styles[1].slice(0, styles[1].length - 4) === "paper" &&
         numPick === 0
@@ -92,6 +95,7 @@ const resetFunction = () => {
   const gameResults = document.querySelector(".game-results");
   const resultBtn = document.querySelector(".result-btn");
   const computer = document.querySelector(".comp-results");
+  const confettiBox = document.querySelector(".confetti-box");
   resetBtn.addEventListener("click", (e) => {
     console.log(e.currentTarget.classList);
     gameWindow.style.display = "flex";
@@ -110,6 +114,7 @@ const resetFunction = () => {
     } else if (computer.classList.contains("scissors")) {
       computer.classList.remove("scissors");
     }
+    confettiBox.style.bottom = "-200px";
   });
 };
 
@@ -123,6 +128,12 @@ const rulesBtn = () => {
   closeBtn.addEventListener("click", () => {
     overlay.style.display = "none";
   });
+};
+
+const confettiFunc = () => {
+  const confettiBox = document.querySelector(".confetti-box");
+  confettiBox.innerHTML = "🎉";
+  confettiBox.style.bottom = "30px";
 };
 
 gameBtn();

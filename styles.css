@@ -23,11 +23,12 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: radial-gradient(
-    circle at top,
+    circle,
     var(--color-lightblue),
     var(--color-darkblue)
   );
   font-family: var(--font-family);
+  overflow: hidden;
 }
 
 /* Hero Section Styling */
@@ -41,8 +42,8 @@ body {
 }
 
 .hero-inner {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -298,6 +299,16 @@ body {
   font-size: 1rem;
   letter-spacing: 2px;
   cursor: pointer;
+}
+
+/* Confetti Styling */
+
+.confetti-box {
+  position: absolute;
+  font-size: 100px;
+  bottom: -200px;
+  margin: 0 auto;
+  transition: 0.3s all ease-out;
 }
 
 /* Media Screen Styling */
